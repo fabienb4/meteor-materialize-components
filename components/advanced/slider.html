@@ -1,0 +1,23 @@
+<template name="slider">
+  <div class="slider {{#if fullscreen}}fullscreen{{/if}}">
+    <ul class="slides">
+      {{#each slides}}
+        <li>
+          <img src="{{image}}">
+          {{#if caption}}
+            {{#with caption}}
+              <div class="caption {{alignment}}-align">
+                {{#if title}}
+                  <h3 class="{{titleColor}}">{{title}}</h3>
+                {{/if}}
+                {{#if content}}
+                  <h5 class="light {{contentColor}}">{{content}}</h5>
+                {{/if}}
+              </div>
+            {{/with}}
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

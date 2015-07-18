@@ -1,0 +1,15 @@
+<template name="modal">
+  <div id="{{id}}" class="modal {{type}}">
+    <div class="modal-content">
+      <h4>{{title}}</h4>
+      <p>{{content}}</p>
+    </div>
+    {{#if actions}}
+      <div class="modal-footer">
+        {{#each actions}}
+          {{> button href=link text=linkText flat=flat color=color textColor=textColor modalAction="modal-action modal-close"}}
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+</template>

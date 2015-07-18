@@ -1,0 +1,41 @@
+<template name="card">
+  {{#if cardPanel}}
+    <div class="card-panel {{backgroundColor}}">
+      <span class="{{textColor}}">{{content}}</span>
+    </div>
+  {{else}}
+    <div class="card {{size}} {{backgroundColor}}">
+      {{#if image}}
+        <div class="card-image {{#if reveal}}waves-effect waves-block waves-light{{/if}}">
+          <img class="{{#if reveal}}activator{{/if}}" src="{{image}}">
+          <span class="card-title">{{title}}</span>
+        </div>
+      {{/if}}
+      <div class="card-content">
+        {{#unless image}}
+          <span class="card-title grey-text text-darken-4">{{title}}</span>
+        {{/unless}}
+        {{#if reveal}}
+          <p class="center">
+            <a class="activator waves-effect waves-light btn-flat">{{> icon name="expand_more"}}</a>
+          </p>
+        {{else}}
+          <p class="{{textColor}}">{{content}}</p>
+        {{/if}}
+      </div>
+      {{#if reveal}}
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{title}}{{> icon name="close" alignment="right"}}</span>
+          <p>{{content}}</p>
+        </div>
+      {{/if}}
+      {{#if actions}}
+        <div class="card-action">
+          {{#each actions}}
+            <a href="{{link}}">{{linkText}}</a>
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+  {{/if}}
+</template>

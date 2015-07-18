@@ -1,0 +1,35 @@
+<template name="navbar">
+  <div class="{{#if fixed}}navbar-fixed{{/if}}">
+    <nav class="{{color}} {{textColor}}">
+      <div class="nav-wrapper container">
+        <a href="{{title.link}}" class="brand-logo {{title.side}}">
+          {{title.text}}
+        </a>
+        <a href="#" data-activates="mobile-nav" class="button-collapse">
+          {{> icon name="menu"}}
+        </a>
+        <ul class="{{linksSide}} hide-on-med-and-down">
+          {{#each links}}
+            {{> navbarLink}}
+          {{/each}}
+        </ul>
+        <ul class="side-nav {{color}} {{textColor}}" id="mobile-nav">
+          {{#each links}}
+            {{> navbarLink}}
+          {{/each}}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</template>
+
+<template name="navbarLink">
+  <li class="{{#if active}}active{{/if}}">
+    <a {{options}}>
+      {{#if icon}}
+        {{> icon name=icon.name alignment=iconSide}}
+      {{/if}}
+      {{linkText}}
+    </a>
+  </li>
+</template>

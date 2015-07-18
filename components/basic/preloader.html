@@ -1,0 +1,31 @@
+<template name="preloader">
+  <div class="preloader-wrapper {{size}} {{#if active}}active{{/if}}">
+    {{#if flashing}}
+      {{#each colors}}
+        <div class="spinner-layer spinner-{{this}}">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <div class="spinner-layer spinner-{{color}}">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    {{/if}}
+  </div>
+</template>

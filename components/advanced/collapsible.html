@@ -1,0 +1,17 @@
+<template name="collapsible">
+  <ul class="collapsible {{#if popout}}popout{{/if}} {{backgroundColor}} {{textColor}}" data-collapsible="{{type}}">
+    {{#each items}}
+      <li>
+        <div class="collapsible-header {{../backgroundColor}} {{#if active}}active{{/if}}">
+          {{#if icon}}
+            {{> icon name=icon color=iconColor}}
+          {{/if}}
+          {{title}}
+        </div>
+        <div class="collapsible-body">
+          <p>{{content}}</p>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</template>

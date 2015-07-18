@@ -1,0 +1,10 @@
+<template name="button">
+  <a class="{{classes}}" href="{{href}}" {{options}}>
+    {{#if icon}}
+      {{> icon name=icon.name alignment=iconSide color=icon.color}}
+    {{/if}}
+    {{#unless floating}}
+      {{text}}
+    {{/unless}}
+  </a>
+</template>

@@ -1,0 +1,10 @@
+<template name="tabs">
+  <ul class="tabs">
+    {{#each tabs}}
+      <li class="tab col s3"><a href="#{{id}}">{{title}}</a></li>
+    {{/each}}
+  </ul>
+  {{#each tabs}}
+    <div id="{{id}}" class="col s12">{{content}}</div>
+  {{/each}}
+</template>

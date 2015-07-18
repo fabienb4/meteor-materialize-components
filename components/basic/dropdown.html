@@ -1,0 +1,18 @@
+<template name="dropdown">
+  <ul id="{{id}}" class="dropdown-content">
+    {{#each items}}
+      {{#if divider}}
+        <li class="divider"></li>
+      {{else}}
+        <li>
+          <a href="{{link}}">
+            {{linkText}}
+            {{#if badge}}
+              {{> badge badge}}
+            {{/if}}
+          </a>
+        </li>
+      {{/if}}
+    {{/each}}
+  </ul>
+</template>

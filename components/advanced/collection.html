@@ -1,0 +1,43 @@
+<template name="collection">
+  {{#if links}}
+    <div class="collection">
+      {{#each links}}
+        <a href="{{link}}" class="collection-item {{../backgroundColor}} {{../textColor}}">{{linkText}}</a>
+      {{/each}}
+    </div>
+  {{else}}
+    <ul class="collection {{#if header}}with-header{{/if}}">
+      {{#if header}}
+        <li class="collection-header {{backgroundColor}} {{textColor}}"><h4>{{header}}</h4></li>
+      {{/if}}
+      {{#each items}}
+        <li class="collection-item {{#if dismissable}}dismissable{{/if}} {{#if avatar}}avatar{{/if}} {{../backgroundColor}} {{../textColor}}">
+          {{#if avatar}}
+            {{#with avatar}}
+              {{#if image}}
+                <img src="{{image}}" alt="" class="circle">
+              {{else}}
+                {{> icon name=icon circle=true backgroundColor=iconBackgroundColor color=iconColor}}
+              {{/if}}
+            {{/with}}
+          {{/if}}
+          {{#if title}}
+            <span class="title">Title</span><br />
+          {{/if}}
+          {{content}}
+          {{#if secondaryContent}}
+            {{#with secondaryContent}}
+              <a href="{{link}}" class="secondary-content">
+                {{> icon name=icon color=iconColor}}
+              </a>
+            {{/with}}
+          {{else}}
+            {{#if badge}}
+              {{> badge badge}}
+            {{/if}}
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+</template>
