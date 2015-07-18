@@ -293,7 +293,7 @@ $ meteor add fabienb4:materialize-components
 - `loadingScreen`
   - `backgroundColor` => `String` in Materialize.BACKGROUND_COLORS
   - `size` => `String` (see `preloader` > `size`)
-  - `flashing` => `String` (see `preloader` > `flashing`)
+  - `flashing` => `Boolean` (see `preloader` > `flashing`)
   - `color` => `String` (see `preloader` > `color`)
 
 ## License
