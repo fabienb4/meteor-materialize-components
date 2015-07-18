@@ -25,17 +25,17 @@ $ meteor add fabienb4:materialize-components
 - `badge`
   - `text` => `String`
   - `new` => `Bbolean`
-  - `backgroundColor` => `String` in Materialize.BACKGROUND_COLORS
-  - `textColor` => `String` in Materialize.TEXT_COLORS
+  - `backgroundColor` => `String` in `Materialize.BACKGROUND_COLORS`
+  - `textColor` => `String` in `Materialize.TEXT_COLORS`
 - `button`
   - `text` => `String`
   - `icon` => `Object`
     - `name` => `String`
-    - `aligment` => `String` in ["left", "right"], default: "left"
-    - `color` => `String` in Materialize.TEXT_COLORS
+    - `aligment` => `String` in `["left", "right"]`, default: `"left"`
+    - `color` => `String` in `Materialize.TEXT_COLORS`
   - `href` => `String`
-  - `color` => `String` in Materialize.BACKGROUND_COLORS
-  - `textColor` => `String` in Materialize.TEXT_COLORS
+  - `color` => `String` in `Materialize.BACKGROUND_COLORS`
+  - `textColor` => `String` in `Materialize.TEXT_COLORS`
   - `waves` => `Boolean`
   - `floating` => `Boolean`
   - `flat` => `Boolean`
@@ -53,11 +53,11 @@ $ meteor add fabienb4:materialize-components
     - `badge` => `Object` (see `badge` component)
     - `divider` => `Boolean` (other properties are disregarded if true)
 - `icon`
-  - `name` => `String` in Materialize.ICONS
-  - `size` => `String` in ["tiny", "small", "medium", "large"]
-  - `backgroundColor` => `String` in Materialize.BACKGROUND_COLORS
-  - `color` => `String` in Materialize.TEXT_COLORS
-  - `alignment` => `String` in ["left", "right"], default: ""
+  - `name` => `String` in `Materialize.ICONS`
+  - `size` => `String` in `["tiny", "small", "medium", "large"]`
+  - `backgroundColor` => `String` in `Materialize.BACKGROUND_COLORS`
+  - `color` => `String` in `Materialize.TEXT_COLORS`
+  - `alignment` => `String` in `["left", "right"]`, default: `""`
   - `circle` => `Boolean`
 - `input`
   - `colSize` => `Number` from 1 to 12
@@ -67,22 +67,22 @@ $ meteor add fabienb4:materialize-components
   - `label` => `String`
 - `modal`
   - `id` => `String`
-  - `type` => `String` in ["modal-fixed-footer", "bottom-sheet"], default: ""
+  - `type` => `String` in `["modal-fixed-footer", "bottom-sheet"]`, default: `""`
   - `title` => `String`
   - `content` => `String`
   - `actions` => `Object`
     - `link` => `String`
     - `linkText` => `String`
     - `flat` => `Boolean`
-    - `color` => `String` in Materialize.BACKGROUND_COLORS
-    - `textColor` => `String` in Materialize.TEXT_COLORS
+    - `color` => `String` in `Materialize.BACKGROUND_COLORS`
+    - `textColor` => `String` in `Materialize.TEXT_COLORS`
 - `navbar`
   - `fixed` => `Boolean`
-  - `color` => `String` in Materialize.BACKGROUND_COLORS
-  - `textColor` => `String` in Materialize.TEXT_COLORS
+  - `color` => `String` in `Materialize.BACKGROUND_COLORS`
+  - `textColor` => `String` in `Materialize.TEXT_COLORS`
   - `title` => `Object`
     - `link` => `String`
-    - `side` => `String` in ["right", "center"], default: ""
+    - `side` => `String` in `["right", "center"]`, default: `""`
     - `text` => `String`
   - `links` => `Object`
     - `active` => `Boolean`
@@ -90,17 +90,17 @@ $ meteor add fabienb4:materialize-components
       - any HTML property usable on `<a>` tag
     - `icon` => `Object`
       - `name` => `String`
-      - `alignment` => `String` in ["left", "right"], default: "left"
+      - `alignment` => `String` in `["left", "right"]`, default: `"left"`
     - `linkText` => `String`
 - `preloader`
-  - `size` => `String` in ["big", "small"], default: ""
-  - `active` => `Boolean` default: true
+  - `size` => `String` in `["big", "small"]`, default: `""`
+  - `active` => `Boolean` default: `true`
   - `flashing` => `Boolean`
-  - `color` => `String` in ["blue", "red", "yellow", "green"], default: "blue"
+  - `color` => `String` in `["blue", "red", "yellow", "green"]`, default: `"blue"`
 - `progress`
-  - `backgroundColor` => `String` in Materialize.BACKGROUND_COLORS
-  - `color` => `String` in Materialize.BACKGROUND_COLORS
-  - `type` => `String` in ["determinate", "indeterminate"], default: "indeterminate"
+  - `backgroundColor` => `String` in `Materialize.BACKGROUND_COLORS`
+  - `color` => `String` in `Materialize.BACKGROUND_COLORS`
+  - `type` => `String` in `["determinate", "indeterminate"]`, default: `"indeterminate"`
 - `searchbar`
   - `name` => `String`
 - `tabs`
@@ -291,7 +291,7 @@ $ meteor add fabienb4:materialize-components
 
 ### Custom
 - `loadingScreen`
-  - `backgroundColor` => `String` in Materialize.BACKGROUND_COLORS
+  - `backgroundColor` => `String` in `Materialize.BACKGROUND_COLORS`
   - `size` => `String` (see `preloader` > `size`)
   - `flashing` => `Boolean` (see `preloader` > `flashing`)
   - `color` => `String` (see `preloader` > `color`)
