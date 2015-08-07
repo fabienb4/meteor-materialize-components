@@ -1,5 +1,5 @@
 Template.modal.onRendered(function() {
-  this.$(".modal-trigger").leanModal();
+  $(".modal-trigger").leanModal();
 });
 
 Template.modal.helpers({
