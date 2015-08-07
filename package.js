@@ -19,6 +19,7 @@ Package.onUse(function(api) {
 
   api.use([
     'mongo',
+    'underscore',
     'materialize:materialize@0.97.0',
     'aldeed:simple-schema@1.3.3'
   ], ['client', 'server']);
