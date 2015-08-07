@@ -21,12 +21,14 @@ Package.onUse(function(api) {
     'mongo',
     'underscore',
     'materialize:materialize@0.97.0',
-    'aldeed:simple-schema@1.3.3'
+    'aldeed:simple-schema@1.3.3',
+    'aldeed:collection2@2.3.3'
   ], ['client', 'server']);
 
   api.imply([
     'materialize:materialize',
-    'aldeed:simple-schema'
+    'aldeed:simple-schema',
+    'aldeed:collection2'
   ], ['client', 'server']);
 
   api.addFiles([
