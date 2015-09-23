@@ -17,7 +17,7 @@
               {{#if image}}
                 <img src="{{image}}" alt="" class="circle">
               {{else}}
-                {{> icon name=icon circle=true backgroundColor=iconBackgroundColor color=iconColor}}
+                {{> icon name=icon.name circle=true backgroundColor=icon.backgroundColor textColor=icon.textColor}}
               {{/if}}
             {{/with}}
           {{/if}}
@@ -28,7 +28,7 @@
           {{#if secondaryContent}}
             {{#with secondaryContent}}
               <a href="{{link}}" class="secondary-content">
-                {{> icon name=icon color=iconColor}}
+                {{> icon name=icon.name backgroundColor=icon.backgroundColor textColor=icon.textColor}}
               </a>
             {{/with}}
           {{else}}

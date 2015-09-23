@@ -1,17 +1,16 @@
-var collapsibleItemSchema = new SimpleSchema({
+Components._schemas.collapsibleItemSchema = new SimpleSchema({
   active:    { type: Boolean, optional: true },
-  iconColor: { type: String, allowedValues: Materialize.TEXT_COLORS, optional: true },
-  icon:      { type: String, allowedValues: Materialize.ICONS, optional: true },
+  icon:      { type: Components._schemas.iconSchema, optional: true },
   title:     { type: String },
   content:   { type: String }
 });
 
-var collapsibleSchema = new SimpleSchema({
-  backgroundColor: { type: String, allowedValues: Materialize.BACKGROUND_COLORS, optional: true },
-  textColor:       { type: String, allowedValues: Materialize.TEXT_COLORS, optional: true },
+Components._schemas.collapsibleSchema = new SimpleSchema({
+  backgroundColor: Components._schemas.BACKGROUND_COLOR,
+  textColor:       Components._schemas.TEXT_COLOR,
   popout:          { type: Boolean, optional: true },
   type:            { type: String, allowedValues: Components.Collapsibles.TYPES },
-  items:           { type: [collapsibleItemSchema] }
+  items:           { type: [Components._schemas.collapsibleItemSchema] }
 });
 
-Components.Collapsibles.attachSchema(collapsibleSchema);
+Components.Collapsibles.attachSchema(Components._schemas.collapsibleSchema);

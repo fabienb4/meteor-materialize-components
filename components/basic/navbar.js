@@ -1,5 +1,5 @@
 Template.navbar.onRendered(function() {
-  $(".button-collapse").sideNav({
+  this.$(".button-collapse").sideNav({
     closeOnClick: true
   });
 });

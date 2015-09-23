@@ -1,8 +1,10 @@
-var COLORS = ["blue", "red", "yellow", "green"];
+const COLORS = ["blue", "red", "yellow", "green"];
 
 Template.preloader.helpers({
   size: function() {
-    return _.contains(["big", "small"], this.size) ? this.size : "";
+    const SIZES = ["big", "small"];
+
+    return _.contains(SIZES, this.size) ? this.size : "";
   },
   active: function() {
     return this.active === false ? false : true;

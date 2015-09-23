@@ -11,25 +11,26 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.1.0.2');
+  api.versionsFrom('1.2.0.1');
 
   api.use([
-    'templating',
-  ], 'client');
-
-  api.use([
+    'ecmascript',
+    'jquery',
     'mongo',
     'underscore',
-    'materialize:materialize@0.97.0',
+    'stevezhu:lodash@3.10.1',
     'aldeed:simple-schema@1.3.3',
-    'aldeed:collection2@2.3.3'
+    'aldeed:collection2@2.5.0'
   ], ['client', 'server']);
 
   api.imply([
-    'materialize:materialize',
     'aldeed:simple-schema',
     'aldeed:collection2'
   ], ['client', 'server']);
+
+  api.use([
+    'templating'
+  ], 'client');
 
   api.addFiles([
     'materialize_ext.js'
@@ -47,6 +48,7 @@ Package.onUse(function(api) {
 
   // schemas
   api.addFiles([
+    'schemas/_.js',
     'schemas/cards.js',
     'schemas/collapsibles.js',
     'schemas/collections.js',
@@ -59,6 +61,7 @@ Package.onUse(function(api) {
     // basic components
     'components/basic/badge.html',
     'components/basic/button.html',
+    'components/basic/chip.html',
     'components/basic/dropdown.html',
     'components/basic/icon.html',
     'components/basic/input.html',
@@ -88,5 +91,5 @@ Package.onUse(function(api) {
     'components/custom/loading-screen.html'
   ], 'client');
 
-  api.export(['Components' ], ['client', 'server']);
+  api.export(['Materialize', 'Components'], ['client', 'server']);
 });

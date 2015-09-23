@@ -1,6 +1,8 @@
 <template name="input">
   <div class="input-field col s{{colSize}}">
     <input placeholder="{{placeholder}}" id="{{name}}" name="{{name}}" type="{{type}}" class="validate">
-    <label for="{{name}}">{{label}}</label>
+    {{#if label}}
+      <label for="{{name}}">{{label}}</label>
+    {{/if}}
   </div>
 </template>

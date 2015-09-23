@@ -1,6 +1,6 @@
 Template.button.helpers({
   classes: function() {
-    var classes = "";
+    let classes = "";
 
     if (this.waves) {
       classes += " waves-effect waves-light";
@@ -26,8 +26,8 @@ Template.button.helpers({
       classes += " " + this.modalAction;
     }
 
-    if (this.color) {
-      classes += " " + this.color;
+    if (this.backgroundColor) {
+      classes += " " + this.backgroundColor;
     }
 
     if (this.textColor) {

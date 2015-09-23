@@ -1,0 +1,11 @@
+<template name="chip">
+  <div class="chip">
+    {{#if image}}
+      <img src="{{image}}" alt="{{text}}">
+    {{/if}}
+    {{text}}
+    {{#if tag}}
+      <i class="material-icons">close</i>
+    {{/if}}
+  </div>
+</template>

@@ -1,19 +1,19 @@
-var sliderSlideCaptionSchema = new SimpleSchema({
+Components._schemas.sliderSlideCaptionSchema = new SimpleSchema({
   alignment:    { type: String, allowedValues: Components.Sliders.ALIGNMENTS },
-  titleColor:   { type: String, allowedValues: Materialize.TEXT_COLORS, optional: true },
+  titleColor:   Components._schemas.TEXT_COLOR,
   title:        { type: String, optional: true },
-  contentColor: { type: String, allowedValues: Materialize.TEXT_COLORS, optional: true },
+  contentColor: Components._schemas.TEXT_COLOR,
   content:      { type: String, optional: true }
 });
 
-var sliderSlideSchema = new SimpleSchema({
-  image:   { type: String, optional: true },// FIXME: change to use cfs uploaded image
-  caption: { type: sliderSlideCaptionSchema, optional: true }
+Components._schemas.sliderSlideSchema = new SimpleSchema({
+  image:   { type: String, optional: true },
+  caption: { type: Components._schemas.sliderSlideCaptionSchema, optional: true }
 });
 
-var sliderSchema = new SimpleSchema({
+Components._schemas.sliderSchema = new SimpleSchema({
   fullscreen: { type: Boolean, defaultValue: false, optional: true },
-  slides:     { type: [sliderSlideSchema] }
+  slides:     { type: [Components._schemas.sliderSlideSchema] }
 });
 
-Components.Sliders.attachSchema(sliderSchema);
+Components.Sliders.attachSchema(Components._schemas.sliderSchema);

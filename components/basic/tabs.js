@@ -1,3 +1,3 @@
 Template.tabs.onRendered(function() {
-  $("ul.tabs").tabs();
+  this.$("ul.tabs").tabs();
 });

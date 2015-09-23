@@ -4,7 +4,7 @@
       <li>
         <div class="collapsible-header {{../backgroundColor}} {{#if active}}active{{/if}}">
           {{#if icon}}
-            {{> icon name=icon color=iconColor}}
+            {{> icon name=icon.name backgroundColor=icon.backgroundColor textColor=icon.textColor}}
           {{/if}}
           {{title}}
         </div>

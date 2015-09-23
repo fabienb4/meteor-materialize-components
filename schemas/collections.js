@@ -1,35 +1,27 @@
-var collectionLinkSchema = new SimpleSchema({
-  link:     { type: String },
-  linkText: { type: String }
+Components._schemas.collectionItemAvatarSchema = new SimpleSchema({
+  image: { type: String, optional: true },
+  icon:  { type: Components._schemas.iconSchema, optional: true }
 });
 
-var collectionItemAvatarSchema = new SimpleSchema({
-  image:               { type: String, optional: true },// FIXME: change to use cfs uploaded image
-  iconbackgroundColor: { type: String, allowedValues: Materialize.BACKGROUND_COLORS, optional: true },
-  iconColor:           { type: String, allowedValues: Materialize.TEXT_COLORS, optional: true },
-  icon:                { type: String, allowedValues: Materialize.ICONS, optional: true },
+Components._schemas.collectionItemSecondaryContentSchema = new SimpleSchema({
+  link: { type: String },
+  icon: { type: Components._schemas.iconSchema, optional: true }
 });
 
-var collectionItemSecondaryContentSchema = new SimpleSchema({
-  link:      { type: String },
-  iconColor: { type: String, allowedValues: Materialize.TEXT_COLORS, optional: true },
-  icon:      { type: String, allowedValues: Materialize.ICONS},
-});
-
-var collectionItemSchema = new SimpleSchema({
+Components._schemas.collectionItemSchema = new SimpleSchema({
   dismissable:      { type: Boolean, optional: true },
-  avatar:           { type: collectionItemAvatarSchema, optional: true },
+  avatar:           { type: Components._schemas.collectionItemAvatarSchema, optional: true },
   title:            { type: String, optional: true },
   content:          { type: String },
-  secondaryContent: { type: collectionItemSecondaryContentSchema, optional: true }
+  secondaryContent: { type: Components._schemas.collectionItemSecondaryContentSchema, optional: true }
 });
 
-var collectionSchema = new SimpleSchema({
-  backgroundColor: { type: String, allowedValues: Materialize.BACKGROUND_COLORS, optional: true },
-  textColor:       { type: String, allowedValues: Materialize.TEXT_COLORS, optional: true },
-  links:           { type: collectionLinkSchema, optional: true },
+Components._schemas.collectionSchema = new SimpleSchema({
+  backgroundColor: Components._schemas.BACKGROUND_COLOR,
+  textColor:       Components._schemas.TEXT_COLOR,
+  links:           { type: [Components._schemas.linkSchema], optional: true },
   header:          { type: String, optional: true },
-  items:           { type: collectionItemSchema, optional: true }
+  items:           { type: [Components._schemas.collectionItemSchema], optional: true }
 });
 
-Components.Collections.attachSchema(collectionSchema);
+Components.Collections.attachSchema(Components._schemas.collectionSchema);

@@ -1,6 +1,6 @@
 <template name="navbar">
   <div class="{{#if fixed}}navbar-fixed{{/if}}">
-    <nav class="{{color}} {{textColor}}">
+    <nav class="{{backgroundColor}} {{textColor}}">
       <div class="nav-wrapper container">
         <a href="{{title.link}}" class="brand-logo {{title.side}}">
           {{title.text}}
@@ -13,7 +13,7 @@
             {{> navbarLink}}
           {{/each}}
         </ul>
-        <ul class="side-nav {{color}} {{textColor}}" id="mobile-nav">
+        <ul class="side-nav {{backgroundColor}} {{textColor}}" id="mobile-nav">
           {{#each links}}
             {{> navbarLink}}
           {{/each}}
