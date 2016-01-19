@@ -1,5 +1,7 @@
 # fabienb4:materialize-components
 
+> **This package is no longer maintained.**
+
 A collection of Materialize components (templates) to use with Meteor.
 
 ## Table of Contents
